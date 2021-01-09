@@ -27,17 +27,17 @@ metadata:
   name: customers-service
 spec:
   rules:
-  - host: petclinic-staging.codynco.com
-    http:
-      paths:
-      - backend:
-          serviceName: customers-service
-          servicePort: 8081
-        path: /api/gateway(/|$)(.*)
-      - backend:
-          serviceName: customers-service
-          servicePort: 8081
-        path: /api/customer(/|$)(.*)
+    - host: petclinic-staging.codynco.com
+      http:
+        paths:
+        - backend:
+            serviceName: customers-service
+            servicePort: 8081
+          path: /api/gateway(/|$)(.*)
+        - backend:
+            serviceName: customers-service
+            servicePort: 8081
+          path: /api/customer(/|$)(.*)
 
 ---
 apiVersion: extensions/v1beta1
@@ -46,13 +46,13 @@ metadata:
   name: vets-service
 spec:
   rules:
-  - host: petclinic-staging.codynco.com
-    http:
-      paths:
-      - backend:
-          serviceName: vets-service
-          servicePort: 8083
-        path: /api/vet(/|$)(.*)
+    - host: petclinic-staging.codynco.com
+      http:
+        paths:
+        - backend:
+            serviceName: vets-service
+            servicePort: 8083
+          path: /api/vet(/|$)(.*)
 
 ---
 apiVersion: extensions/v1beta1
@@ -61,10 +61,10 @@ metadata:
   name: visits-service
 spec:
   rules:
-  - host: petclinic-staging.codynco.com
-    http:
-      paths:
-      - backend:
-          serviceName: visits-service
-          servicePort: 8082
-        path: /api/visit(/|$)(.*)
+    - host: petclinic-staging.codynco.com
+      http:
+        paths:
+        - backend:
+            serviceName: visits-service
+            servicePort: 8082
+          path: /api/visit(/|$)(.*)
