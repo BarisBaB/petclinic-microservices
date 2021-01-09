@@ -13,14 +13,14 @@ metadata:
   name: customers-service
 spec:
   rules:
-  - host: petclinic04.codynco.com
-    http:
-      paths:
-      - backend:
-          serviceName: customers-service
-          servicePort: 8081
-        path: /api/gateway(/|$)(.*)
-      - backend:
-          serviceName: customers-service
-          servicePort: 8081
-        path: /api/customer(/|$)(.*)
+    - host: petclinic04.codynco.com
+      http:
+        paths:
+        - backend:
+            serviceName: customers-service
+            servicePort: 8081
+          path: /api/gateway(/|$)(.*)
+        - backend:
+            serviceName: customers-service
+            servicePort: 8081
+          path: /api/customer(/|$)(.*)

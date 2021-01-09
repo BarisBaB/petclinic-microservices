@@ -12,11 +12,11 @@ metadata:
   name: api-gateway
 spec:
   rules:
-  - host: petclinic04.codynco.com
-    http:
-      paths:
-        - backend:
-            serviceName: api-gateway
-            servicePort: 8080
+    - host: petclinic04.codynco.com
+      http:
+        paths:
+          - backend:
+              serviceName: api-gateway
+              servicePort: 8080
 status:
   loadBalancer: {}
