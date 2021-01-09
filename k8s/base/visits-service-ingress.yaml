@@ -12,11 +12,10 @@ metadata:
   name: visits-service
 spec:
   rules:
-    - host: petclinic04.codynco.com
-      http:
-        paths:
-          - backend:
-              serviceName: visits-service
-              servicePort: 8082
-status:
-  loadBalancer: {}
+  - host: petclinic04.gulecserdar.de
+    http:
+      paths:
+      - backend:
+          serviceName: visits-service
+          servicePort: 8082
+        path: /api/visit(/|$)(.*)
