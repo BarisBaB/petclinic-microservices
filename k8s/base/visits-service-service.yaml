@@ -11,3 +11,12 @@ metadata:
   labels:
     io.kompose.service: visits-service
   name: visits-service
+spec:
+  ports:
+    - name: "8082"
+      port: 8082
+      targetPort: 8082
+  selector:
+    io.kompose.service: visits-service
+status:
+  loadBalancer: {}
