@@ -11,12 +11,3 @@ metadata:
   labels:
     io.kompose.service: visits-service
   name: visits-service
-spec:
-  rules:
-  - host: petclinic04.codynco.com
-    http:
-      paths:
-      - backend:
-          serviceName: visits-service
-          servicePort: 8082
-        path: /api/visit(/|$)(.*)
